@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tangga Grammar</title>
+<meta name="description" content="Belajar grammar bahasa Inggris dari A1 sampai C1, unit demi unit, untuk persiapan IELTS. Gratis, bisa dipakai offline.">
+<meta name="theme-color" content="#1f4fd1">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#view">Lewati ke konten</a>
+
+<header class="topbar">
+  <button class="icon-btn only-mobile" id="menuBtn" type="button" aria-label="Buka daftar unit" aria-expanded="false">☰</button>
+  <a class="brand" href="#home">Tangga<span>Grammar</span></a>
+  <div class="top-stats" aria-label="Statistik">
+    <span title="Unit selesai"><b id="tDone">0</b>/59</span>
+    <span title="Poin pengalaman"><b id="tXp">0</b> XP</span>
+    <span title="Hari belajar berturut-turut"><b id="tStreak">0</b> hari</span>
+  </div>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Ganti tema terang/gelap">◐</button>
+</header>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Daftar unit">
+    <div class="side-links">
+      <a href="#home" data-route="home">Beranda</a>
+      <a href="#glosarium" data-route="glosarium">Glosarium</a>
+      <a href="#kuis" data-route="kuis">Mode Kuis</a>
+      <a href="#pengaturan" data-route="pengaturan">Pengaturan</a>
+    </div>
+    <label class="search"><span class="sr">Cari unit</span>
+      <input id="search" type="search" placeholder="Cari unit, mis. passive">
+    </label>
+    <div id="unitList"></div>
+  </nav>
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data/content.js"></script>
+<script src="data/ielts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
